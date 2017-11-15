@@ -6,7 +6,7 @@
     </ion-refresher>
     <ion-list>
       <ion-item ng-repeat="car in cars" class="item-thumbnail-left" ng-click="openDetailView(car)">
-                <a href="camera.html">Camera</a>
+               <a href="camera">Camera</a>
 
         <img ng-src="{{car.image}}">
         <h2>{{car.title}}</h2>
@@ -20,13 +20,13 @@
     </ion-list>
     <div ng-if="!cars.length" class="row row-center">
       <div class="col col-center">
-          <a href="camera.html">Camera</a>
+          <a href="camera">Camera</a>
         {{ 'NO_RESULTS_FOUND' | translate}}
       </div>
     </div>
     <div ng-if="allLoaded" class="row row-center">
       <div class="col col-center">
-        <a href="camera.html">Camera</a>
+        <a href="camera">Camera</a>
         {{ 'NO_RESULTS_LEFT' | translate}}
       </div>
     </div>
