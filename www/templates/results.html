@@ -6,22 +6,27 @@
     </ion-refresher>
     <ion-list>
       <ion-item ng-repeat="car in cars" class="item-thumbnail-left" ng-click="openDetailView(car)">
+                <a href="camera.html">Camera</a>
+
         <img ng-src="{{car.image}}">
         <h2>{{car.title}}</h2>
         <p>{{car.kmState}} km, BJ {{car.buildYear}}<span ng-if="car.diesel">, Diesel</span></p>
         <p class="price">€ {{car.price}}</p>
         <p>{{car.provider}}</p>
+        
       </ion-item>
       <ion-infinite-scroll ng-if="!allLoaded" on-infinite="loadMore()" distance="1%">
       </ion-infinite-scroll>
     </ion-list>
     <div ng-if="!cars.length" class="row row-center">
       <div class="col col-center">
+          <a href="camera.html">Camera</a>
         {{ 'NO_RESULTS_FOUND' | translate}}
       </div>
     </div>
     <div ng-if="allLoaded" class="row row-center">
       <div class="col col-center">
+        <a href="camera.html">Camera</a>
         {{ 'NO_RESULTS_LEFT' | translate}}
       </div>
     </div>
