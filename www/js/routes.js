@@ -12,12 +12,12 @@ angular.module('app.routes', [])
     url: '/page1',
     templateUrl: 'templates/tabsController.html',
     controller: 'tabsCtrl as tabs',
-    resolve: {
+    /* resolve: {
       loginRequired: loginRequired
       //criteriaPromise: ['criterias', function(criterias){
         //return criterias.getList();
       //}]
-    },
+    }, */
     abstract:true
   })
 
@@ -27,12 +27,12 @@ angular.module('app.routes', [])
       'tab1': {
         templateUrl: 'templates/results.html',
         controller: 'resultsCtrl',
-        resolve: {
+       /*  resolve: {
           loginRequired: loginRequired
           //carsPromise: ['cars', function(cars) {
             //return
           //}]
-        }
+        } */
       }
     }
   })
@@ -53,9 +53,9 @@ angular.module('app.routes', [])
       'tab2': {
         templateUrl: 'templates/add.html',
         controller: 'addCtrl',
-        resolve: {
+        /* resolve: {
           loginRequired: loginRequired
-        }
+        } */
       }
     }
   })
@@ -66,9 +66,9 @@ angular.module('app.routes', [])
       'tab3': {
         templateUrl: 'templates/criterias.html',
         controller: 'criteriasCtrl',
-        resolve: {
+        /* resolve: {
           loginRequired: loginRequired
-        }
+        } */
       }
     }
   })
@@ -84,6 +84,26 @@ angular.module('app.routes', [])
     templateUrl: 'templates/login.html',
     controller: 'loginCtrl'
   })
+  
+  
+  
+   .state('adminposts', {
+    url: '/adminposts',
+    templateUrl: 'templates/adminposts.html',
+    controller: 'AdminPosts'
+  })
+  
+  .state('adminusers', {
+    url: '/adminusers',
+    templateUrl: 'templates/adminusers.html',
+    controller: 'AdminUsers'
+  })
+  
+  .state('camera', {
+    url: '/camera',
+    templateUrl: 'templates/camera.html',
+    controller: 'Camera'
+  })
 
     .state('signup', {
     url: '/signup',
@@ -98,27 +118,27 @@ angular.module('app.routes', [])
     url: '/settings',
     templateUrl: 'templates/settings.html',
     controller: 'settingsCtrl',
-    resolve: {
+   /*  resolve: {
       loginRequired: loginRequired
-    }
+    } */
   })
 
     .state('listing', {
     url: '/listing',
     templateUrl: 'templates/listing.html',
     controller: 'listingCtrl',
-    resolve: {
+   /*  resolve: {
       loginRequired: loginRequired
-    }
+    } */
   })
 
     .state('premium', {
     url: '/premium',
     templateUrl: 'templates/premium.html',
     controller: 'premiumCtrl',
-    resolve: {
+    /* resolve: {
       loginRequired: loginRequired
-    }
+    } */
   })
 
     .state('info', {

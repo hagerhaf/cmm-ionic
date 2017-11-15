@@ -26,7 +26,19 @@ angular.module('app.controllers', [])
 
 })
 
+
+.controller('Camera', function($scope) {
+
+})
+
   .controller('imprintCtrl', function($scope) {
 
 })
 
+.controller('AdminPosts', function($scope) {
+
+})
+
+.controller('AdminUsers', function($scope) {
+
+})
